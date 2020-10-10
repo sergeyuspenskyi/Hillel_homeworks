@@ -5,6 +5,8 @@ def shopping_in_store(goods_list) -> tuple:
         if stock[product] > 0:
             result += prices[product]
             stock[product] -= 1
+        if stock[product] <= 0:
+            print('Note! Some of your needed products are out of stock. Please come later or pre-order them.')
     return f'Price is: {result}', '\n'.join(f'{k}: {v}' for k, v in stock.items())
 
 
