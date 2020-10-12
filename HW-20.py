@@ -18,7 +18,7 @@ def price_for_car_rent(days4rent) -> int:
     return price_rent
 
 
-def trip_cost(city, days4rent, nights):
+def trip_cost(city, days4rent, nights) -> int:
     """Returns total cost of travel: booking, tickets and car rent"""
     return booking_at_hotel_cost(nights) + price_for_car_rent(days4rent) + plane_ride_cost(city)
 
@@ -28,4 +28,4 @@ cities = {'Kyiv': 500,
           'Odessa': 300,
           'Kharkiv': 450,
           'Rivne': 600}
-print(trip_cost('Kyiv', 5, 12))
+print('Your total trip cost is: ', trip_cost('Kyiv', 5, 12), 'UAH')
