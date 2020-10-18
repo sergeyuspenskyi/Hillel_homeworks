@@ -1,9 +1,8 @@
-def magic_seven(number) -> str:
+def magic_seven(number) -> bool:
     """Checks if digit 7 in number"""
     if str(7) in str(number):
-        return 'True'
-    else:
-        return 'False'
+        return True
+    return False
 
 
 list_ = [211, 323, 732, 32, 87, 12, 2, 6, 7, 89]
