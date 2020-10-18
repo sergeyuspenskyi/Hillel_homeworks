@@ -15,7 +15,7 @@
 # Task 5
 # first_list = [i for i in range(1, 22)]
 # second_list = [odd for odd in first_list if odd % 2 != 0]
-# middle_third = first_list[7:14]
+# middle_third = first_list[len(first_list) // 3: (len(first_list) * 2) // 3]
 # print(middle_third)
 
 # Task 6
@@ -23,4 +23,4 @@
 
 # Task 7
 # mystery = '!XeXgXaXsXsXeXmX XtXeXrXcXeXsX XeXhXtX XmXaX XI'
-# print(mystery[::-2])
+# print(''.join(i for i in reversed(mystery) if i != 'X'))
