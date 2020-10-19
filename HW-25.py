@@ -1,6 +1,4 @@
 import string
 with open('alphabet.txt', 'w') as text:
-    number = 1
-    for line in list(string.ascii_uppercase):
-        text.write(str(number) + ': ' + line + '\n')
-        number = number + 1
+    for number, letter in enumerate(string.ascii_uppercase, start=1):
+        text.write(f'{number}: {letter} \n')
