@@ -18,7 +18,7 @@ Snappy_sound = input('Put a sound of Snappy: ')
 print(Snappy.dog_sound(Snappy_sound))
 
 
-class Alabai(Dogs):
+class Shepherd(Dogs):
 
     def __init__(self, name, age, breed, loudness):
         super().__init__(name, age, breed)
@@ -28,17 +28,17 @@ class Alabai(Dogs):
         return f'{super().dog_sound(sound)} {self.loudness}'
 
 
-Chappy = Alabai('Chappy', 2, 'Alabai', 'loudly')
+Chappy = Shepherd('Chappy', 2, 'Alabai', 'loudly')
 Chappy_sound = input('Put a sound of Chappy: ')
 print(Chappy.dog_sound(Chappy_sound))
 
 
-class Spitz(Alabai):
+class GermanShepherd(Shepherd):
 
     def dog_sound(self, sound):
-        return f'{super().dog_sound(sound)} {self.loudness}'
+        return f'{super().dog_sound(sound)}'
 
 
-Ronny = Spitz('Ronny', 6, 'Spitz', 'quietly')
+Ronny = GermanShepherd('Ronny', 6, 'Spitz', 'quietly')
 Ronny_sound = input('Put a sound of Ronny: ')
 print(Ronny.dog_sound(Ronny_sound))
