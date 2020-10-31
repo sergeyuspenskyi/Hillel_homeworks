@@ -28,7 +28,7 @@ class Shepherd(Dogs):
         return f'{super().dog_sound(sound)} {self.loudness}'
 
 
-Chappy = Shepherd('Chappy', 2, 'Alabai', 'loudly')
+Chappy = Shepherd('Chappy', 2, 'Shepherd', 'loudly')
 Chappy_sound = input('Put a sound of Chappy: ')
 print(Chappy.dog_sound(Chappy_sound))
 
@@ -39,6 +39,6 @@ class GermanShepherd(Shepherd):
         return f'{super().dog_sound(sound)}'
 
 
-Ronny = GermanShepherd('Ronny', 6, 'Spitz', 'quietly')
+Ronny = GermanShepherd('Ronny', 6, 'German Shepherd', 'quietly')
 Ronny_sound = input('Put a sound of Ronny: ')
 print(Ronny.dog_sound(Ronny_sound))
