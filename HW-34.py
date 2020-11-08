@@ -1,5 +1,5 @@
 def quick_list_sort(unsorted_list: list) -> list:
-    """Returns sorted list"""
+    """Returns sorted list from unsorted one"""
     if len(unsorted_list) < 2:
         return unsorted_list
     pivot = unsorted_list[0]
