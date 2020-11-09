@@ -1,3 +1,16 @@
+from random import randint
+
+
+def input_list_length() -> int:
+    """Returns list length (int) from user input"""
+    return int(input('Please input length of list: '))
+
+
+def random_list_generator(list_length: int) -> list:
+    """Returns a random list """
+    return [randint(0, 1000) for i in range(list_length)]
+
+
 def quick_list_sort(unsorted_list: list) -> list:
     """Returns sorted list from unsorted one"""
     if len(unsorted_list) < 2:
@@ -13,11 +26,6 @@ def quick_list_sort(unsorted_list: list) -> list:
     return quick_list_sort(before_pivot) + [pivot] + quick_list_sort(after_pivot)
 
 
-def int_to_list_converter() -> list:
-    """Returns a random list with the length you enter"""
-    from random import randint
-    my_list_length = int(input('Please input length of list: '))
-    return [randint(0, 1000) for i in range(my_list_length)]
-
-
-print(quick_list_sort(int_to_list_converter()))
+my_list_length = input_list_length()
+my_random_list = random_list_generator(my_list_length)
+print(quick_list_sort(my_random_list))
