@@ -26,20 +26,21 @@ class Group:
 
     @classmethod
     def group_generator(cls, name, quantity):
-        return cls(name, quantity)
+        group_list = [student for student in range(quantity)]
+        return name, group_list
 
     def __str__(self):
         """Returns information about group"""
-        return f'Group {self._group_name}.\nNumber of students: {self._quantity}.'
+        return f'Group {self._group_name}.\nNumber of students: {self._quantity}\n'
 
 
-class Student(Group):
+class Student:
 
-    def __init__(self, name, age, mark, group_name, quantity):
-        super().__init__(group_name, quantity)
+    def __init__(self, name, age, mark):
         self.name = name
         self.age = age
         self.mark = mark
+        self.group = Group
 
     @property
     def name(self):
@@ -88,10 +89,4 @@ class Student(Group):
 
     def __str__(self):
         """Returns information about student and his/her group"""
-        return f'Student: {self._name}.\nAge: {self._age}.\nMark: {Student.num_mark_to_letter_mark(self.mark)}\n' \
-               f'{super().__str__()}'
-
-
-# Example of Student
-john_wick = Student('John Wick', 20, 88, '101-A', 30)
-print(john_wick)
+        return f'Student: {self._name}.\nAge: {self._age}.\nMark: {Student.num_mark_to_letter_mark(self.mark)}'
